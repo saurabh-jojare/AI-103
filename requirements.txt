@@ -2,3 +2,7 @@ openai
 python-dotenv
 azure-ai-projects==2.2.0
 httpx
+
+
+
+
