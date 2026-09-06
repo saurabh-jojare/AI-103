@@ -4,10 +4,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from openai import OpenAI
 
-load_dotenv(Path(__file__).resolve().parent / ".env")
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
-endpoint = "https://foundry-openai-delete.services.ai.azure.com/openai/v1"
-deployment_name = "gpt-5.4"
+endpoint = os.environ["AZURE_OPENAI_ENDPOINT"]
+deployment_name = os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"]
 api_key = os.environ["OPENAI_API_KEY"]
 
 client = OpenAI(
